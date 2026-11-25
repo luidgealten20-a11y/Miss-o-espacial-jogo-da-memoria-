@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio da Memória - Espaço</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">JOGO DA MEMÓRIA</p>
+      <h1>Missão Espacial</h1>
+      <p class="subtitle">Encontre todos os pares de símbolos do espaço!</p>
+    </header>
+
+    <section class="panel" aria-label="Informações da partida">
+      <div class="stat"><span>Movimentos</span><strong id="moves">0</strong></div>
+      <div class="stat"><span>Tempo</span><strong id="timer">00:00</strong></div>
+      <div class="stat"><span>Pares</span><strong id="pairs">0/8</strong></div>
+      <button id="restart" type="button">Recomeçar</button>
+    </section>
+
+    <section id="game-board" class="game-board" aria-label="Cartas do jogo"></section>
+    <p id="message" class="message" role="status" aria-live="polite">Escolha duas cartas para começar.</p>
+    <footer>Desenvolvido com HTML5, CSS3 e JavaScript.</footer>
+  </main>
+</body>
+</html>

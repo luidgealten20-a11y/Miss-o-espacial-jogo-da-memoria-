@@ -1,0 +1,46 @@
+* { box-sizing: border-box; }
+:root { color-scheme: dark; }
+body {
+  margin: 0; min-height: 100vh; font-family: Arial, Helvetica, sans-serif;
+  color: #f4f6ff; background: radial-gradient(circle at top, #27366d 0, #10152e 48%, #080b19 100%);
+  display: flex; justify-content: center; padding: 28px 14px;
+}
+.container { width: min(760px, 100%); text-align: center; }
+.eyebrow { letter-spacing: 4px; color: #91a7ff; font-size: .78rem; font-weight: bold; }
+h1 { margin: 8px 0; font-size: clamp(2rem, 7vw, 3.2rem); }
+.subtitle { color: #c4cbea; margin-top: 0; }
+.panel {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  flex-wrap: wrap; padding: 14px; margin: 24px 0 18px; border: 1px solid #394779;
+  border-radius: 16px; background: #171f42cc;
+}
+.stat { display: grid; gap: 4px; min-width: 78px; }
+.stat span { color: #aab7e8; font-size: .78rem; }
+.stat strong { font-size: 1.2rem; }
+button {
+  border: 0; border-radius: 10px; padding: 11px 16px; background: #8297ff;
+  color: #10152e; font-weight: bold; cursor: pointer;
+}
+button:hover { background: #a7b5ff; }
+.game-board {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;
+}
+.card {
+  aspect-ratio: 1 / 1; border: 1px solid #5265a5; border-radius: 14px;
+  background: linear-gradient(145deg, #26366e, #18234d); color: white;
+  font-size: clamp(1.8rem, 7vw, 3rem); display: grid; place-items: center;
+  transition: transform .18s, background .18s; user-select: none;
+}
+.card:hover { transform: translateY(-2px); }
+.card .symbol { visibility: hidden; }
+.card.revealed, .card.matched { background: #f0f3ff; color: #19234b; }
+.card.revealed .symbol, .card.matched .symbol { visibility: visible; }
+.card.matched { border-color: #72d6ad; background: #d9ffed; }
+.card:disabled { cursor: default; opacity: 1; }
+.message { min-height: 28px; color: #c4cbea; margin: 18px 0; }
+footer { color: #7f8bb9; font-size: .8rem; margin-top: 22px; }
+@media (max-width: 480px) {
+  .game-board { gap: 8px; }
+  .panel { justify-content: center; }
+  .stat { min-width: 68px; }
+}
